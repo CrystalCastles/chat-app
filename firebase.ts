@@ -6,7 +6,7 @@ import { initialize } from "next/dist/server/lib/render-server";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBW1_TgPP_mlVLIlO5LY2NNCQZNj7_qe3g",
+  apiKey: process.env.FIREBASE_API_KEY,
   authDomain: "chat-app-7df73.firebaseapp.com",
   projectId: "chat-app-7df73",
   storageBucket: "chat-app-7df73.appspot.com",
