@@ -10,7 +10,7 @@ const subscriptionConverter: FirestoreDataConverter<Subscription> = {
         }
     },
     fromFirestore: function (snapshot: QueryDocumentSnapshot, options: SnapshotOptions): Subscription {
-        const data = snapshot.data(options)!;
+        const data = snapshot.data(options);
         const sub: Subscription = {
             id: snapshot.id,
             current_period_end: data.current_period_end,

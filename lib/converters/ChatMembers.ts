@@ -36,7 +36,7 @@ const chatMembersConverter: FirestoreDataConverter<ChatMembers> = {
     snapshot: QueryDocumentSnapshot,
     options: SnapshotOptions
   ): ChatMembers {
-    const data = snapshot.data(options)!;
+    const data = snapshot.data(options);
 
     return {
       userId: snapshot.id,
@@ -50,7 +50,7 @@ const chatMembersConverter: FirestoreDataConverter<ChatMembers> = {
 };
 
 export const addChatRef = (chatId: string, userId: string) =>
-  doc(db, "chats", chatId, "members", "userId").withConverter(
+  doc(db, "chats", chatId, "members", userId).withConverter(
     chatMembersConverter
   );
 

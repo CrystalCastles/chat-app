@@ -1,12 +1,13 @@
 import ChatList from "@/components/ChatList";
 
-function ChatsPage() {
-  type Props = {
-    params: {};
-    searchParams: {
-      error: string;
-    };
+type Props = {
+  params: {};
+  searchParams: {
+    error: string;
   };
+};
+
+function ChatsPage({ searchParams: { error } }: Props) {
 
   return (
     <div>
