@@ -2,7 +2,6 @@ import { getApp, getApps, initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getFunctions } from "firebase/functions";
-import { initialize } from "next/dist/server/lib/render-server";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {

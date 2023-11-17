@@ -19,7 +19,7 @@ function ChatListRows({ initialChats }: { initialChats: ChatMembers[] }) {
       initialValue: initialChats,
     }
   );
-
+  
   if (members?.length === 0)
     return (
       <div className="flex flex-col justify-center items-center pt-40 space-y-2">

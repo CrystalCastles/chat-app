@@ -30,10 +30,7 @@ function UserButton({ session }: { session: Session | null }) {
     session && (
       <DropdownMenu>
         <DropdownMenuTrigger>
-          <UserAvatar
-            name={session.user?.name}
-            image={session.user?.image}
-          />
+          <UserAvatar name={session.user?.name} image={session.user?.image} />
         </DropdownMenuTrigger>
         <DropdownMenuContent>
           <DropdownMenuLabel>{session.user?.name}</DropdownMenuLabel>
@@ -48,21 +45,23 @@ function UserButton({ session }: { session: Session | null }) {
           {/* { subscription.role === "pro" && */}
           {subscription?.status == "active" && (
             <>
-            <DropdownMenuLabel className="text-xs flex items-center justify-center space-x-1 text-[#E935C1] animate-pulse">
-              <StarIcon fill="#E935C1" />
-              <p>Pro</p>
-            </DropdownMenuLabel>
+              <DropdownMenuLabel className="text-xs flex items-center justify-center space-x-1 text-[#E935C1] animate-pulse">
+                <StarIcon fill="#E935C1" />
+                <p>Pro</p>
+              </DropdownMenuLabel>
 
-            <DropdownMenuSeparator />
+              <DropdownMenuSeparator />
 
-            <DropdownMenuItem>
-              Manage
-              <ManageAccountButton />
-            </DropdownMenuItem>
+              <DropdownMenuItem>
+                Manage
+                <ManageAccountButton />
+              </DropdownMenuItem>
             </>
           )}
-          
-          <DropdownMenuItem onClick={() => signOut()}>Sign Out</DropdownMenuItem>
+
+          <DropdownMenuItem onClick={() => signOut()}>
+            Sign Out
+          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     )
