@@ -23,6 +23,7 @@ import { ToastAction } from "./ui/toast";
 import { doc, getDocs, query, serverTimestamp, setDoc } from "firebase/firestore";
 import { addChatRef, chatMembersRef } from "@/lib/converters/ChatMembers";
 import { getUserByEmailRef } from "@/lib/converters/User";
+import ShareLink from "./ShareLink";
 
 const formSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
@@ -58,8 +59,8 @@ function InviteUser({ chatId }: { chatId: string }) {
       (doc) => doc.data()
     ).length;
     // check if the user is about to exceed the PRO plan which is 3 chats
-    const isPro =
-      subscription?.role === "pro" && subscription.status === "active";
+    // const isPro = subscription?.role === "pro" && subscription.status === "active";
+    const isPro = subscription?.status === "active";
 
     if (!isPro && noOfUsersInChat >= 2) {
       toast({
@@ -140,7 +141,7 @@ function InviteUser({ chatId }: { chatId: string }) {
               <DialogTitle>Add User to Chat</DialogTitle>
               <DialogDescription>
                 Simply enter another users email address to invite them to this
-                chat!{""}
+                chat! {""}
                 <span className="text-indigo-600 font-bold">
                   (Note: they must be registered)
                 </span>

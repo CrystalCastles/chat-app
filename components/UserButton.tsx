@@ -53,7 +53,6 @@ function UserButton({ session }: { session: Session | null }) {
               <DropdownMenuSeparator />
 
               <DropdownMenuItem>
-                Manage
                 <ManageAccountButton />
               </DropdownMenuItem>
             </>

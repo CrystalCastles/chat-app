@@ -65,8 +65,7 @@ function ShareLink({
           <DialogDescription>
             Any user who has been{" "}
             <span className="text-indigo-600 font-bold">granted access</span>
-            {""}
-            can use this link
+            {""} can use this link
           </DialogDescription>
         </DialogHeader>
         <div className="flex items-center space-x-2">
