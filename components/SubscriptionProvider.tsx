@@ -34,7 +34,7 @@ function SubscriptionProvider({ children }: { children: React.ReactNode }) {
     );
   }, [session]);
 
-  return <div>{children}</div>;
+  return <>{children}</>;
 }
 
 export default SubscriptionProvider;
