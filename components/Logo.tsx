@@ -1,4 +1,4 @@
-import LogoImage from "@logos/StarParticle.png";
+import LogoImage from "@logos/chatnao.png";
 import Image from "next/image";
 import Link from "next/link";
 import { AspectRatio } from "./ui/aspect-ratio";
