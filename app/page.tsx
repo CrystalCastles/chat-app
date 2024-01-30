@@ -29,7 +29,7 @@ export default async function Home() {
                 Chat with anyone, anywhere.
               </h1>
               <p className="mt-8">
-                The only chat application you'll ever need.{" "}
+                The only chat application you&apos;ll ever need.{" "}
                 <span className="text-indigo-900 dark:text-indigo-500">
                   Featuring automatic translation using AI and secure messaging.
                 </span>
